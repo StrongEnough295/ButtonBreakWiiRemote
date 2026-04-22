@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<app version="0.5">
+<name>Button Break Wii Remote</name>
+<version>r5</version>
+<release_date>20260219000000</release_date>
+<coder>StrongEnough</coder>
+<short_description>Button Break for Wii</short_description>
+<long_description>A port of Button Break, the Homebrew app for Wii U.. but on the Wii!	Chatelog: v0.1 First release 	0.2 Added Nunchuk buttons.. more presses!		v0.3 Added lines in between presses		v0.4 Added the right Punctuation and changed Minus and Plus to Select and Start	v0.5 Made 2 different apps - Wii Remote and Nunchuk because there was no way to just only use the wii remote in v0.2 to v0.4.</long_description>
+</app>
