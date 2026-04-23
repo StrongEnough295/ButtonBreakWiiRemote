@@ -38,12 +38,8 @@ int main() {
 	printf("Hold the Power Button for 3-5 seconds to power off.\n");
 	printf("---------------------------------------------------\n");
 	while (1) {
-		expansion_t exp;
-		WPAD_ScanPads();
-		WPAD_Expansion(0, &exp);
-		if (exp.type == WPAD_EXP_NUNCHUK) {
+		WPAD_ScanPads()
 			u16 buttonsDown = WPAD_ButtonsDown(0);
-			u32 nunchuk_btns = exp.nunchuk.btns;
 			if (buttonsDown & WPAD_BUTTON_A) {
 				printf("Button A pressed.\n");
 				printf("-----------------\n");
@@ -88,16 +84,8 @@ int main() {
 				printf("Button Home pressed.\n");
 				printf("--------------------\n");
 			}
-			if (nunchuk_btns & NUNCHUK_BUTTON_Z) {
-				printf("Button Z pressed.\n");
-				printf("-----------------\n");
-			}
-			if (nunchuk_btns & NUNCHUK_BUTTON_C) {
-				printf("Button C pressed.\n");
-				printf("-----------------\n");
-			}
+			
 
-		}
 		}
 	
 		return 0;
