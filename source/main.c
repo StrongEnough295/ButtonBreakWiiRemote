@@ -33,7 +33,7 @@ int main() {
  
 	Initialise();
  
-	printf("Button Break for Wii v0.5 - Nunchuck\n");
+	printf("Button Break for Wii v0.5 - Wii Remote\n");
 	printf("------------------------------------\n");
 	printf("Hold the Power Button for 3-5 seconds to power off.\n");
 	printf("---------------------------------------------------\n");
