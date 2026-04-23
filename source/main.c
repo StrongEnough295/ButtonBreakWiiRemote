@@ -38,7 +38,7 @@ int main() {
 	printf("Hold the Power Button for 3-5 seconds to power off.\n");
 	printf("---------------------------------------------------\n");
 	while (1) {
-		WPAD_ScanPads()
+		WPAD_ScanPads();
 			u16 buttonsDown = WPAD_ButtonsDown(0);
 			if (buttonsDown & WPAD_BUTTON_A) {
 				printf("Button A pressed.\n");
