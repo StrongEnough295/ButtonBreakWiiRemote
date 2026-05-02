@@ -33,10 +33,10 @@ int main() {
  
 	Initialise();
  
-	printf("Button Break for Wii v0.5 - Wii Remote\n");
-	printf("------------------------------------\n");
-	printf("Hold the Power Button for 3-5 seconds to power off.\n");
-	printf("---------------------------------------------------\n");
+	printf("Button Break for Wii v0.7\n");
+	printf("-------------------------\n");
+	printf("Press the Home Button to exit.\n");
+	printf("------------------------------\n");
 	while (1) {
 		WPAD_ScanPads();
 			u16 buttonsDown = WPAD_ButtonsDown(0);
@@ -81,11 +81,26 @@ int main() {
 				printf("-------------------------\n");
 			}
 			if (buttonsDown & WPAD_BUTTON_HOME) {
-				printf("Button Home pressed.\n");
-				printf("--------------------\n");
+				printf("Exiting...\n");
+				break;
 			}
-			
 
+			expansion_t exp;
+			WPAD_Expansion(0, &exp);
+
+			if (exp.type == WPAD_EXP_NUNCHUK) {
+				u32 nunchuk_btns = exp.nunchuk.btns;
+
+			if (nunchuk_btns & NUNCHUK_BUTTON_Z) {
+				printf("Button Z pressed.\n");
+				printf("-----------------\n");
+			}
+			if (nunchuk_btns & NUNCHUK_BUTTON_C) {
+				printf("Button C pressed.\n");
+				printf("-----------------\n");
+			}
+
+		}
 		}
 	
 		return 0;
